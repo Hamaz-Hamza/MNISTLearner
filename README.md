@@ -1,5 +1,5 @@
 # MNISTLearner
-A simple machine learner model that attempts to predict the digits in the MINST datasset, which is a large database of handwritten digits that is commonly used for training various image processing systems. It uses pixel voting to make predicitions, where white pixels vote for the number which has occured the most times when that specific pixel was white.
+A simple machine learning model that attempts to predict the digits in the MINST datasset, which is a large database of handwritten digits that is commonly used for training various image processing systems. It uses pixel voting to make predicitions, where white pixels vote for the number which has occured the most times when that specific pixel was white.
 
 The code applies a binary threshold to each image in the training and testing sets. This is done using the `cv2.threshold` function, which applies a fixed-level thresholding to each element in an array (in this case, the array is an image). Otsu Thresholding is used to find the best threshold to binarize the image. This is done to simplify the images and reduce the amount of data the model needs to learn from.
 

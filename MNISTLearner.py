@@ -44,6 +44,9 @@ class MNISTLearner:
         for y in range(rows):
             for x in range(cols):
                 if (test_sample[y][x] == 255):
-                    for key, value in self.predictor[y][x].items():
-                        votes[key] += value
+                    dict_sum = sum(self.predictor[y][x].values())
+                    if (dict_sum != 0):
+                        for key, value in self.predictor[y][x].items():
+                            votes[key] += value/dict_sum
+
         return max(votes, key=votes.get)
